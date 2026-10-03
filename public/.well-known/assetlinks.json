@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.netpulse.ai",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:0F:70:93:17:F1:C9:61:94:07:95:48:B7:4B:9F:50:3B:AA:89:C8:4D:3C:A9:12:F1:76:AE:34:68"
+      ]
+    }
+  }
+]

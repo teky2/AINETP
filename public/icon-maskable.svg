@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient extending full bleed for Android maskable icon -->
+    <linearGradient id="bgGradMask" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e172a" />
+      <stop offset="50%" stop-color="#060a12" />
+      <stop offset="100%" stop-color="#020408" />
+    </linearGradient>
+
+    <!-- Glowing Cyan/Teal Gradient -->
+    <linearGradient id="cyanTealMask" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+
+    <linearGradient id="dialGradMask" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="60%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+
+    <filter id="neonGlowMask" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="7" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Full-bleed background for maskable icon -->
+  <rect width="512" height="512" fill="url(#bgGradMask)" />
+
+  <!-- Inner safe zone container (scale 0.78 centered at 256,256) -->
+  <g transform="translate(56.32, 56.32) scale(0.78)">
+    <!-- Base Squircle / App Outer Shape -->
+    <rect width="512" height="512" rx="100" fill="#0b1322" stroke="url(#cyanTealMask)" stroke-width="4" stroke-opacity="0.5" />
+
+    <!-- Speedometer Arch (Outer Track) -->
+    <path d="M 120 330 A 160 160 0 1 1 392 330" fill="none" stroke="#1e293b" stroke-width="26" stroke-linecap="round" />
+
+    <!-- Speedometer Illuminated Arc -->
+    <path d="M 120 330 A 160 160 0 1 1 365 200" fill="none" stroke="url(#dialGradMask)" stroke-width="26" stroke-linecap="round" filter="url(#neonGlowMask)" />
+
+    <!-- Center Glow Orb -->
+    <circle cx="256" cy="256" r="54" fill="#091428" stroke="url(#cyanTealMask)" stroke-width="3" />
+    
+    <!-- Pulse / Network Heartbeat Waveform across center -->
+    <path d="M 180 256 L 220 256 L 235 220 L 255 295 L 275 235 L 290 270 L 305 256 L 332 256" fill="none" stroke="#38bdf8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" filter="url(#neonGlowMask)" />
+
+    <!-- Dynamic Speed Needle Arrow -->
+    <line x1="256" y1="256" x2="340" y2="175" stroke="#34d399" stroke-width="6" stroke-linecap="round" filter="url(#neonGlowMask)" />
+    <circle cx="256" cy="256" r="10" fill="#38bdf8" />
+
+    <!-- Speedometer Tick Marks -->
+    <circle cx="120" cy="330" r="4" fill="#38bdf8" />
+    <circle cx="140" cy="190" r="4" fill="#38bdf8" />
+    <circle cx="256" cy="96"  r="5" fill="#34d399" />
+    <circle cx="372" cy="190" r="4" fill="#34d399" />
+    <circle cx="392" cy="330" r="4" fill="#64748b" />
+
+    <!-- Subtitle AI Chip Indicator -->
+    <rect x="186" y="380" width="140" height="34" rx="17" fill="#0c1e36" stroke="#0284c7" stroke-width="1.5" />
+    <text x="256" y="402" text-anchor="middle" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="14" letter-spacing="3">NETPULSE</text>
+  </g>
+</svg>
